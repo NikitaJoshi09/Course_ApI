@@ -20,13 +20,13 @@ def get_home():
 
 
 
-#create
-# @app.post("/course")
-# def create_course(course: Course, session:Session = Depends(get_session)):
-#     session.add(course)
-#     session.commit()
-#     session.refresh(course)
-#     return course
+# create
+@app.post("/course")
+def create_course(course: Course, session:Session = Depends(get_session)):
+    session.add(course)
+    session.commit()
+    session.refresh(course)
+    return course
 
 #get all 
 @app.get("/course")
